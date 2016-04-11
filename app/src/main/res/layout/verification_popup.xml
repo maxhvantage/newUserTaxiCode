@@ -1,0 +1,113 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/pop_up_element"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/edittext_background"
+        android:foregroundGravity="center">
+
+        <ImageView
+            android:id="@+id/flyimage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:src="@drawable/flyblack" />
+
+        <TextView
+            android:id="@+id/popuptext_verification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/flyimage"
+            android:layout_toEndOf="@+id/flyimage"
+            android:layout_toRightOf="@+id/flyimage"
+            android:text="@string/prompt_emailverify"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/colorblack"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/boundry"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/popuptext_verification"
+            android:background="@color/inputtypecolor" />
+
+        <EditText
+            android:id="@+id/verfiy_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/flyimage"
+            android:layout_alignStart="@+id/flyimage"
+            android:layout_below="@+id/flyimage"
+            android:hint="@string/title_activity_emailhint">
+
+        </EditText>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/verfiy_edittext"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginRight="@dimen/activity_top_margin"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                app:mrl_rippleBackground="@color/colorPrimary"
+                app:mrl_rippleColor="@color/black">
+
+                <Button
+                    android:id="@+id/btn_cancelveryfy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@null"
+                    android:text="@string/prompt_cancel"
+                    android:textColor="@color/textbuttoncolor"
+                    android:textSize="@dimen/text_size"
+                    android:textStyle="bold" />
+            </com.balysv.materialripple.MaterialRippleLayout>
+
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginRight="@dimen/activity_top_margin"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                app:mrl_rippleBackground="@color/colorPrimary"
+                app:mrl_rippleColor="@color/black">
+
+                <Button
+                    android:id="@+id/btn_acceptorveryfy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@null"
+                    android:text="@string/prompt_acceptor"
+                    android:textColor="@color/textbuttoncolor"
+                    android:textSize="@dimen/text_size"
+                    android:textStyle="bold" />
+            </com.balysv.materialripple.MaterialRippleLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/cross"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/cross_margin"
+        android:background="@drawable/crossblack" />
+
+</RelativeLayout>
